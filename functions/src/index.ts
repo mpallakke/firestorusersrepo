@@ -22,12 +22,20 @@ app.get('/', (request, response) => {
 
 app.post('/users', async (request, response) => {
   try {
-    const { firstname, lastname, phone, email } = request.body;
+    const { lastname, husband, wife, date_registered, remarks, phone1, phone2, emails1, email2, reg_2019, reg_2018, reg_2017 } = request.body;
     const data = {
-      firstname,
       lastname,
-      phone,
-      email
+      husband,
+      wife,
+      date_registered,
+      remarks,
+      phone1,
+      phone2,
+      emails1,
+      email2,
+      reg_2019,
+      reg_2018,
+      reg_2017
     } 
     const userRef = await db.collection('users').add(data);
     const user = await userRef.get();
