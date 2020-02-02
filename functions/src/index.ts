@@ -23,29 +23,28 @@ app.get('/', (request, response) => {
 app.post('/users', async (request, response) => {
   try {
     const {
-      2018registered,
-      2019registered,
-      Date registered,
-      Email address,
-      Husband,
-      Last Name,
-      Phone number,
-      Remarks,
-      Wife,
+      registered_2018,
+      registered_2019,
+      registered_date,
+      email_address,
+      husband,
+      last_Name,
+      phone_number,
+      remarks,
+      wife,
       id
     } = request.body;
 
     const data = {
-
-      2018registered,
-      2019registered,
-      Date registered,
-      Email address,
-      Husband,
-      Last Name,
-      Phone number,
-      Remarks,
-      Wife,
+      registered_2018,
+      registered_2019,
+      registered_date,
+      email_address,
+      husband,
+      last_Name,
+      phone_number,
+      remarks,
+      wife,
       id
     } 
     const userRef = await db.collection('users').add(data);
